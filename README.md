@@ -20,9 +20,10 @@ Other Developers
 
 ## Some Screenshorts:
 <ul>
-<li> Landing Page <br> ![Screenshot 2023-09-17 193220](https://github.com/thegeek36/Missing-Person-Detection-System/assets/76440306/9ac56c35-a299-4b30-8611-ded40e90a313) </li>
-  <li>Report Missing Case <br>![Uploading Screenshot 2023-09-17 193312.png…]()
- </li>
+<li> Landing Page <br> <img src = "https://github.com/thegeek36/Missing-Person-Detection-System/assets/76440306/9ac56c35-a299-4b30-8611-ded40e90a313"></img> </li>
+  <li>Report Missing Case <br>
+      </li>
+
   <li> Face Detection <br> </li>
   <li> Mail <BR>  </li>
 </ul>
