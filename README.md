@@ -11,4 +11,19 @@
   </ul>
   <b>Future Enhancements</b>
   <p>The potential for enhancing Bharatiya Rescue is vast. Integration with advanced AI algorithms and machine learning models could improve face recognition accuracy and enhance the efficiency of locating missing persons. Additionally, leveraging geospatial technology could enable real-time tracking and provide a comprehensive view of the missing person's movements. Integration with social media platforms and public alert systems could further amplify the reach and effectiveness of the alerts, facilitating a broader community response in finding missing persons. The project's future goals include establishing partnerships with law enforcement agencies and collaborating with technology innovators to continuously improve and expand the system's capabilities, ultimately contributing to a safer and more secure society. 🌟</p>
-  
+
+Other Developers
+<ul>
+  <li>Akash Mohanty</li>
+  <li>Sarin Sahu</li>
+</ul>
+
+## Some Screenshorts:
+<ul>
+<li> Landing Page <br> ![Screenshot 2023-09-17 193220](https://github.com/thegeek36/Missing-Person-Detection-System/assets/76440306/9ac56c35-a299-4b30-8611-ded40e90a313) </li>
+  <li>Report Missing Case <br>![Uploading Screenshot 2023-09-17 193312.png…]()
+ </li>
+  <li> Face Detection <br> </li>
+  <li> Mail <BR>  </li>
+</ul>
+
