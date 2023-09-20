@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Missing Person Found Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .details {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+    <h1>Missing Person Found</h1>
+    </div>
+    </div>
+    <div class="content">
+    <p>Dear {{fathers_name}},</p>
+    <p>We are pleased to inform you that the missing person missing form {{missing_from}} and you were concerned about has been found. The person was located in a camera footage, and we have identified their whereabouts.</p>
+    <p>Here are the details:</p>
+    <ul>
+        <li><strong>Name:</strong> {{first_name}} {{last_name}}</li>
+        <li><strong>Date and Time of Sighting:</strong> {{date_time}}</li>
+        <li><strong>Location:</strong> {{location}}</li>
+        <li><strong>Aadhar Number:</strong>{{aadhar_number}}</li>
+    </ul>
+    <p>We understand the relief this news must bring to you. If you have any further questions or require more information, please do not hesitate to reach out to us.</p>
+    <p>Thank you for your cooperation and concern in this matter.</p>
+    <p>Sincerely,</p>
+    <p> Team Bharatiya Rescue</p>
+</div>
+</body>
+</html>

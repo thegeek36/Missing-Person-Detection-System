@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Case Registered Successfully</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .details {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Case Registered Successfully</h1>
+        </div>
+        <div class="content">
+            <p>Dear {{fathers_name}},</p>
+            <p>We are writing to confirm that your case has been registered successfully with Bharatiya Rescue. Below are the details of your case:</p>
+
+            <div class="details">
+                <p>Case Registered on: {{date_time}}</p>
+                <p>Name: {{first_name}} {{last_name}}</p>
+                <p>Aadhar Number: {{aadhar_number}}</p>
+                <p>Missing From: {{missing_from}}</p>
+            </div>
+
+            <p>Your information and case details have been recorded in our system. Our team will review your case and take necessary action. You will be notified of any updates or developments regarding your case.</p>
+            <p>If you have any urgent concerns or additional information to provide, please contact our support team at support@bhratiyarecue.com.</p>
+            <p>Thank you for choosing Bharatiya Rescue. We are committed to assisting you during this time.</p>
+
+            <p>Best regards,</p>
+            <p>Bharatiya Rescue</p>
+        </div>
+    </div>
+</body>
+</html>
