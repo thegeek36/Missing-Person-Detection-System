@@ -55,12 +55,12 @@ def detect(request):
                         face_detected = True  # Set the flag to True to indicate a face has been detected
                         break  # Break the loop once a match is found
 
-        # Check if no face was detected in the current frame
-        if not face_detected:
-            name = "Unknown"
-            #cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
-            font = cv2.FONT_HERSHEY_DUPLEX
-            cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
+            # Check if no face was detected in the current frame
+            if not face_detected:
+                name = "Unknown"
+                cv2.rectangle(frame, (left, bottom - 35), (right, bottom), (0, 0, 255), cv2.FILLED)
+                font = cv2.FONT_HERSHEY_DUPLEX
+                cv2.putText(frame, name, (left + 6, bottom - 6), font, 1.0, (255, 255, 255), 1)
 
         # Display the resulting image
         cv2.imshow('Camera Feed', frame)
@@ -71,9 +71,9 @@ def detect(request):
             
     video_capture.release()
     cv2.destroyAllWindows()
-    return render(request, "surrivalence.html")
+    return render(request, "surveillance.html")
 
-def surrivalence(request):
+def surveillance(request):
     return render(request,"surrivalence.html")
 
 def register(request):
