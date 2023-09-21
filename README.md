@@ -20,11 +20,14 @@ Other Developers
 
 ## Some Screenshorts:
 <ul>
-<li> Landing Page <br> <img src = "https://github.com/thegeek36/Missing-Person-Detection-System/assets/76440306/9ac56c35-a299-4b30-8611-ded40e90a313"></img> </li>
+<li> Landing Page <br> <img src = "https://github.com/thegeek36/Missing-Person-Detection-System/assets/76440306/0e2f4438-5a1d-4428-aa09-28ba492e91e5"></img> </li>
   <li>Report Missing Case <br>
+      <img src = "https://github.com/thegeek36/Missing-Person-Detection-System/assets/76440306/5ecd1289-d542-4eb2-b567-46fca0b60d18"></img>
       </li>
-
-  <li> Face Detection <br> </li>
-  <li> Mail <BR>  </li>
+  <li> Face Detection <br> 
+      <img src = "https://github.com/thegeek36/Missing-Person-Detection-System/assets/76440306/86b9e088-d699-4ab4-a053-aa6e328ddf1d"></img>>
+    </li>
+  <li> Mail <BR>
+    <img src = "https://github.com/thegeek36/Missing-Person-Detection-System/assets/76440306/7058fee9-80c3-4b8b-8841-558c5ed7c483"> </img>
+        </li>
 </ul>
-
