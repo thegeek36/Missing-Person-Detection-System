@@ -60,7 +60,7 @@
             height: auto;
         }
     </style>
-    <title>Register</title>
+    <title>Edit Details</title>
 </head>
 <body style="font-family: 'Open Sans', sans-serif;">
     <nav class="navbar navbar-expand-lg  navbar-dark bg-black py-2" style="background-color: #37517E;">
@@ -79,7 +79,7 @@
             <div class="container mt-5 mb-3" style="padding-top: 8%;">
                 <form class="row g-3 p-4" method="POST" enctype="multipart/form-data" style="background-color: rgb(255, 255, 255);border-radius: 8%;padding-top: 5%;">
                     {% csrf_token %}
-                    <h2>Report Missing Case</h2>
+                    <h2>Edit Information</h2>
                     <p style="padding-left: 3%;color: rgb(123, 121, 121);"></p>
                     {% if messages %}
                     <div class="alert alert-primary" role="alert">
@@ -92,63 +92,63 @@
                     <div class="row">
                         <div class="col">
                             <label for="first_name" class="form-label">First Name</label>
-                            <input type="text" placeholder="Enter Your First Name" name="first_name" class="form-control" required>
+                            <input type="text" value = "{{person.first_name}}" name="first_name" class="form-control" >
                         </div>
                         <div class="col">
                             <label for="last_name" class="form-label">Last Name</label>
-                            <input type="text" placeholder="Enter Your Surname" name="last_name" class="form-control" required>
+                            <input type="text" value = "{{person.last_name}}" name="last_name" class="form-control" >
                         </div>
                     </div>
                     <div class="row">
                     <div class="col">
-                        <label for="last_name" class="form-label">Father's Name</label>
-                        <input type="text" placeholder="Enter Father's Name" name="fathers_name" class="form-control" required>
+                        <label for="fathers_name" class="form-label">Father's Name</label>
+                        <input type="text" value = "{{person.fathers_name}}" name="fathers_name" class="form-control" >
                     </div>
                     <div class="col">
-                        <label for="last_name" class="form-label">Date of Birth</label>
-                        <input type="date" placeholder="Choose DOB" name="dob" class="form-control" required>
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" value = "{{person.dob}}" name="dob" class="form-control" >
                     </div>
                     </div>
                     <div class="mb-3">
                         <label for="address" class="form-label">Address</label>
-                        <input type="text" name="address" placeholder="Enter your Address" class="form-control" required>
+                        <input type="text" name="address" value = "{{person.address}}" class="form-control" >
                     </div>
                     <div class="row">
                     <div class="col">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" name="email" placeholder="your@email.com" class="form-control" required>
+                        <input type="email" name="email" value = "{{ person.email }}" class="form-control" >
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="col">
                         <label for="phonenum" class="form-label">Phone Number</label>
-                        <input type="number" name="phonenum" placeholder="Phone Number" class="form-control" required>
+                        <input type="number" name="phonenum" value = "{{ person.phonenum }}" class="form-control" >
                     </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <label for="email" class="form-label">Aadhar Number</label>
-                            <input type="number" name="aadhar_number" placeholder="XXXX XXXX XXXX" class="form-control" required>
+                            <label for="aadhar_number" class="form-label">Aadhar Number</label>
+                            <input type="number" name="aadhar_number" value = "{{ person.aadhar_number }}" class="form-control" >
                         </div>
                         <div class="col">
-                            <label for="phonenum" class="form-label">Missing Date</label>
-                            <input type="date" name="missing_date" placeholder="Missing Date" class="form-control" required>
+                            <label for="missing_date" class="form-label">Missing Date</label>
+                            <input type="date" name="missing_date" value = "{{ person.missing_date }}" class="form-control" >
                         </div>
                     </div>
                         <div class="row" style="padding: 2%;">
                         <div class="col">
                         <!-- Male -->
                         <label class="checkbox-label" for="male">Male</label>
-                        <input type="checkbox" id="male" name="gender" value="Male">
+                        <input type="checkbox" id="male" name="gender" value = "{{ person.gender }}">
                         </div>
                         <!-- Female -->
                         <div class="col">
                         <label class="checkbox-label" for="female">Female</label>
-                        <input type="checkbox" id="female" name="gender" value="Female">
+                        <input type="checkbox" id="female" name="gender" value = "{{ person.gender }}">
                         </div>
                         <!-- Others -->
                         <div class="col">
                         <label class="checkbox-label" for="others">Others</label>
-                        <input type="checkbox" id="others" name="gender" value="Others">
+                        <input type="checkbox" id="others" name="gender" value = "{{ person.gender  }}">
                         </div>
                     </div>
                         <div class="mb-3">
@@ -156,9 +156,9 @@
                             <input type= "file" name = "image" class="form-control">
                         </div>
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <button type="submit" class="btn btn-success">Register</button>
+                            <button type="submit" class="btn btn-success">Update</button>
                         </div> 
-                    <div id="emailHelp" class="form-text">Go to the <a href="/surveillance/" style="text-decoration:none;"><b> Survillance Mode </b></a>here.</div>
+                    <!-- <div id="emailHelp" class="form-text">Go to the <a href="/surveillance/" style="text-decoration:none;"><b> Survillance Mode </b></a>here.</div> -->
                 </form>
             </div>
         </div>

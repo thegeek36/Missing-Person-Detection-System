@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Remove this line (Bootstrap JS) since you're using Bootstrap 5 CSS only -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.min.js"></script> -->
+
+    <link rel="icon" type="image/x-icon" href="/media/image/favicon.png">
+
+    <!-- Remove this line (Bootstrap 4 CSS) as it's conflicting with Bootstrap 5 -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.5.0/css/bootstrap.min.css"> -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+   <!-- MDB -->
+   <link href="/media/img/favicon.png" rel="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Overall container */
+        label.checkbox-label {
+            display: inline-block;
+            margin-right: 20px; /* Adjust the margin as needed to control spacing */
+        }
+
+        .container {
+            display: flex;
+            align-items: center; /* Vertically center content */
+            justify-content: center; /* Horizontally center content */
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Left column (for the image) */
+        .left-column {
+            flex: 1; /* Take up half of the container */
+            padding: 20px;
+            text-align: center; /* Center image and content */
+        }
+
+        /* Right column (for the registration form) */
+        .right-column {
+            flex: 1; /* Take up half of the container */
+            padding: 20px;
+            background-color: #f5f5f5; /* Add background color for separation */
+        }
+
+        /* Style for the form (you can customize this) */
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px; /* Slight increase for rounded corners */
+        }
+
+        /* Style for the image (you can customize this) */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <title>Missing Persons</title>
+</head>
+<body style="font-family: 'Open Sans', sans-serif;">
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-black py-2" style="background-color: #37517E;">
+        <div class="container-fluid justify-content-between" style="font-family: 'Jost', sans-serif;padding-left: 8%;">
+            <!-- <a class="navbar-brand" href="#">MyRecipes.com</a> --> 
+            <div class="d-flex">
+              <!-- Brand -->
+              <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="/">
+                <h2>BHARATIYA<br>RESCUE</h2>
+              </a>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <!-- <div class="" >
+        <h1 class="text-center mb-4">Missing Persons</h1>
+        <div class="col-md-4 text-end">
+            
+            <form class="d-flex">
+                <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+            </form>
+        </div>
+        </div> -->
+        <div class="">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="text-left mb-4" style="padding-left: 3%;">Missing Persons</h1>
+                    <!-- ... (your existing card.html content) ... -->
+                </div>
+                <div class="col-md-4 d-flex align-items-center justify-content-end">
+                    <!-- Bootstrap Search Bar -->
+                    <form class="d-flex" method="GET" action="{% url 'missing' %}">
+                        <input class="form-control form-control-sm me-2" type="search" name="search" value="{{ search_query }}" placeholder="Search by Aadhar Number" aria-label="Search">
+                        <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        {% include 'misscard.html' %}
+
+</body>

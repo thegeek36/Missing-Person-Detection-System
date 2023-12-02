@@ -1,0 +1,31 @@
+<div style="position: relative; padding: 2%;">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for person in missingperson %}
+        <div class="row-4 mb-1">
+            <div class="card h-100" style="width: 20rem;">
+                <div class="view overlay">
+                    <img class="card-img-top center-image" src="/media/{{person.image}}" alt="Card image cap" style="width: 100%;" >
+                    <a href="#">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <!-- Title -->
+                    <h5 class="card-title">Name : <b>{{person.first_name}} {{person.last_name}}</b> </h5>
+                    <!-- Text -->
+                    <p class="card-text">Aadhar Number :<b> {{person.aadhar_number}} </b>
+                        <br>
+                        Missing From : <b> {{person.missing_from}} </b>
+                        <br>
+                        Phone Number : <b> {{person.phone_number}} </b>
+                    </p>
+                    <!-- Button -->
+                    <a href="{% url 'delete_person' person.id %}" class="btn btn-outline-danger" id="bt2">Delete</a>
+                    <a href="/update/{{person.id}}" class="btn btn-outline-warning" id="bt3">Edit</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- /delete/{{person.id}}/ -->
