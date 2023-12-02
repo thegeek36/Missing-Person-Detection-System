@@ -10,8 +10,9 @@ from twilio.rest import Client
 from django.shortcuts import get_object_or_404, redirect
 from django.http import HttpResponse
 
-account_sid = 'AC3a629a10c30ae893b21218d62bec3831'
-auth_token = '7eed52bf553ef41e1492367ca1482991'
+#Add yourr own credentials
+account_sid = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx'
+auth_token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 twilio_whatsapp_number = '+14155238886'
 
 # Create your views here.
