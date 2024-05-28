@@ -31,4 +31,5 @@ Other Developers
     <img src = "https://github.com/thegeek36/Missing-Person-Detection-System/assets/76440306/7058fee9-80c3-4b8b-8841-558c5ed7c483"> </img>
         </li>
 </ul>
-<h2>CHANGE SMTP DETAILS IN core/core/setting.py</h2>
+<h4>CHANGE SMTP DETAILS IN core/core/setting.py</h4>
+<h4>Star the repo if you like it.</h4>
