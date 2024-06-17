@@ -31,5 +31,56 @@ Other Developers
     <img src = "https://github.com/thegeek36/Missing-Person-Detection-System/assets/76440306/7058fee9-80c3-4b8b-8841-558c5ed7c483"> </img>
         </li>
 </ul>
-<h4>CHANGE SMTP DETAILS IN core/core/setting.py</h4>
-<h4>Star the repo if you like it.</h4>
+## Getting Started
+
+### Prerequisites
+- Python 3.x
+- `pip` (Python package installer)
+
+### Clone the Repository
+```bash
+git clone https://github.com/thegeek36/Missing-Person-Detection-System.git
+cd Missing-Person-Detection-System
+```
+
+### Set Up Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate  # For Windows use: venv\Scripts\activate
+```
+
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Create a New Database
+Delete the existing `db.sqlite3` file (if present):
+```bash
+rm db.sqlite3  # For Windows, use: del db.sqlite3
+```
+
+Create a new database:
+```bash
+python manage.py migrate
+```
+
+### Create Admin Superuser
+```bash
+python manage.py createsuperuser
+```
+Follow the prompts to set up your admin username, email, and password.
+
+### Run the Server
+```bash
+python manage.py runserver
+```
+Open your browser and navigate to `http://127.0.0.1:8000` to view the application.
+
+### Important Note
+Ensure to change the SMTP details in `core/core/settings.py` to enable the email alert functionality.
+
+## Star the Repository
+If you like the project, don't forget to star the repository!
+
+
