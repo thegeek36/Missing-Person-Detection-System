@@ -11,36 +11,36 @@ from django.shortcuts import get_object_or_404, redirect
 from django.http import HttpResponse
 
 #Add yourr own credentials
-account_sid = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx'
-auth_token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-twilio_whatsapp_number = '+14155238886'
+# account_sid = 'xxxxxxxxxxxxxxxxxxxxxxxxxxx'
+# auth_token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+# twilio_whatsapp_number = '+14155238886'
+
 
 # Create your views here.
 def home(request):
     return render(request,"index.html")
 
-def send_whatsapp_message(to,context):
-    client = Client(account_sid, auth_token)
-    whatsapp_message = (
-    f"Dear {context['fathers_name']},\n\n"
-    f"We are pleased to inform you that the missing person missing from {context['missing_from']} and you were concerned about has been found. "
-    "The person was located in a camera footage, and we have identified their whereabouts.\n\n"
-    "Here are the details:\n"
-    f" - Name: {context['first_name']} {context['last_name']}\n"
-    f" - Date and Time of Sighting: {context['date_time']}\n"
-    f" - Location: {context['location']}\n"
-    f" - Aadhar Number: {context['aadhar_number']}\n\n"
-    #"We understand the relief this news must bring to you. If you have any further questions or require more information, please do not hesitate to reach out to us.\n\n"
-    "Thank you for your cooperation and concern in this matter.\n\n"
-    "Sincerely,\n\n"
-    "Team Bharatiya Rescue ")
-    message = client.messages.create(
-        body=whatsapp_message,
-        from_='whatsapp:' + twilio_whatsapp_number,
-        to='whatsapp:' + to
-    )
-
-    print(f"WhatsApp message sent: {message.sid}")
+# def send_whatsapp_message(to,context):
+#     client = Client(account_sid, auth_token)
+#     whatsapp_message = (
+#     f"Dear {context['fathers_name']},\n\n"
+#     f"We are pleased to inform you that the missing person missing from {context['missing_from']} and you were concerned about has been found. "
+#     "The person was located in a camera footage, and we have identified their whereabouts.\n\n"
+#     "Here are the details:\n"
+#     f" - Name: {context['first_name']} {context['last_name']}\n"
+#     f" - Date and Time of Sighting: {context['date_time']}\n"
+#     f" - Location: {context['location']}\n"
+#     f" - Aadhar Number: {context['aadhar_number']}\n\n"
+#     #"We understand the relief this news must bring to you. If you have any further questions or require more information, please do not hesitate to reach out to us.\n\n"
+#     "Thank you for your cooperation and concern in this matter.\n\n"
+#     "Sincerely,\n\n"
+#     "Team Bharatiya Rescue ")
+#     message = client.messages.create(
+#         body=whatsapp_message,
+#         from_='whatsapp:' + twilio_whatsapp_number,
+#         to='whatsapp:' + to
+#     )
+#     print(f"WhatsApp message sent: {message.sid}")
  
 def detect(request):
     video_capture = cv2.VideoCapture(0)
@@ -85,7 +85,7 @@ def detect(request):
                                     'fathers_name':person.father_name,"aadhar_number":person.aadhar_number,
                                     "missing_from":person.missing_from,"date_time":current_time,"location":"India"}
                         #send_wapmessage(context,current_time,wapnum)
-                        send_whatsapp_message(recipient_phone_number, context)
+                        #send_whatsapp_message(recipient_phone_number, context)
                         html_message = render_to_string('findemail.html',context = context)
                         # Send the email
                         send_mail(subject,'', from_email, [recipientmail], fail_silently=False, html_message=html_message)
